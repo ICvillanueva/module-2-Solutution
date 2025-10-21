@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Menu Page</title>
+  
+  <!-- Embedded CSS -->
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      background-color: #f9f9f9;
+      border: 1px solid black;
+      padding: 20px;
+      margin: 10px;
+      position: relative;
+      float: left;
+    }
+
+    .menu-item p {
+      margin-top: 40px;
+    }
+
+    .section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #e67e22;
+      border: 1px solid black;
+      padding: 5px 10px;
+      font-size: 1.25em;
+      font-weight: bold;
+      color: white;
+    }
+
+    #chicken {
+      background-color: #ffe5b4;
+    }
+
+    #beef {
+      background-color: #d98880;
+    }
+
+    #sushi {
+      background-color: #aed6f1;
+    }
+
+    /* Desktop */
+    @media (min-width: 992px) {
+      .menu-item {
+        width: 31.33%;
+        margin: 1%;
+      }
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .menu-item {
+        width: 48%;
+        margin: 1%;
+      }
+      .menu-item:nth-child(3) {
+        width: 98%;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .menu-item {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Our Menu</h1>
+
+  <div class="container">
+    <section class="menu-item" id="chicken">
+      <div class="section-title">Chicken</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida lorem id orci.</p>
+    </section>
+
+    <section class="menu-item" id="beef">
+      <div class="section-title">Beef</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida lorem id orci.</p>
+    </section>
+
+    <section class="menu-item" id="sushi">
+      <div class="section-title">Sushi</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida lorem id orci.</p>
+    </section>
+  </div>
+
+  <!-- Embedded JavaScript -->
+  <script>
+    window.addEventListener('load', function () {
+      console.log("Page loaded successfully!");
+      alert("Welcome to our responsive menu page!");
+    });
+  </script>
+</body>
+</html>
